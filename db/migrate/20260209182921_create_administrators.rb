@@ -8,7 +8,5 @@ class CreateAdministrators < ActiveRecord::Migration[8.1]
 
       t.timestamps
     end
-
-    execute "ALTER TABLE administrators ADD PRIMARY KEY (user_id);"
   end
 end
