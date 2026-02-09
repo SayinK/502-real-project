@@ -1,0 +1,58 @@
+.officer-contacts h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+}
+
+.officer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.officer-card {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: #fff;
+}
+
+.officer-rank {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: #00629b;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.officer-name {
+  font-size: 1.125rem;
+  margin: 0.25rem 0 0.75rem;
+  color: #1a1a2e;
+}
+
+.officer-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.officer-details li {
+  margin-bottom: 0.35rem;
+}
+
+.officer-details a {
+  color: #00629b;
+  text-decoration: none;
+}
+
+.officer-details a:hover {
+  text-decoration: underline;
+}
