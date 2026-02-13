@@ -1,0 +1,28 @@
+<section class="officer-contacts">
+  <h2>Officer Contacts</h2>
+
+  <% if officers.any? %>
+    <div class="officer-grid">
+      <% officers.each do |admin| %>
+        <div class="officer-card">
+          <div class="officer-rank"><%= admin.rank.titleize %></div>
+          <h3 class="officer-name"><%= admin.user.name %></h3>
+          <ul class="officer-details">
+            <li>
+              <strong>Email:</strong>
+              <%= mail_to admin.user.email, admin.user.email %>
+            </li>
+            <% if admin.user.phone_number.present? %>
+              <li>
+                <strong>Phone:</strong>
+                <%= admin.user.phone_number %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p>No officer contacts available at this time.</p>
+  <% end %>
+</section>
