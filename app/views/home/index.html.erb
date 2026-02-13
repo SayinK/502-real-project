@@ -1,2 +1,14 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>IEEE Tech Website</h1>
+<p>Welcome to the IEEE Tech website!</p>
+
+<!-- Show different content based on login status -->
+<% if admin_signed_in? %>
+  <div class="admin-controls">
+    <p>Welcome, <%= current_admin.full_name %>!</p>
+    <%= link_to "Sign Out", destroy_admin_session_path, method: :get %>
+  </div>
+<% else %>
+  <div class="admin-login">
+    <%= button_to "Admin Sign In with Google", admin_google_oauth2_omniauth_authorize_path, method: :post, data: { turbo: false } %>
+  </div>
+<% end %>

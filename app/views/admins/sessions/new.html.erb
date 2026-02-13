@@ -1,0 +1,9 @@
+<h2>Admin Login</h2>
+<p>Sign in with your Google account to access the admin dashboard.</p>
+
+<%= button_to admin_google_oauth2_omniauth_authorize_path, class: "btn btn-primary", method: :post, data: { turbo: "false" } do %>
+  <span>Sign in with Google</span>
+<% end %>
+
+<br>
+<%= link_to "← Back to Home", root_path %>

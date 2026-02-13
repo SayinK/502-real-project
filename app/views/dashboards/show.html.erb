@@ -1,0 +1,12 @@
+<h1>You're logged in! Welcome to the Admin Dashboard!</h1>
+<p>Admin Email: <%= current_admin.email %></p>
+
+<h2>Admin Controls</h2>
+<ul>
+  <li>Manage Officers (coming soon)</li>
+  <li>Post Announcements (coming soon)</li>
+  <li>Create Events (coming soon)</li>
+</ul>
+
+<%= link_to "Sign Out", destroy_admin_session_path %>
+<%= link_to "View Public Site", root_path %>
